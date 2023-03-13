@@ -13,7 +13,7 @@
         </header>
         <main>
             <section>
-                <form action="submit.html">
+                <form class="form">
                     <!-- Users' full name -->
                     <label for="fullnames">Name </label>
                     <input type="text" id="fullnames" required> <br>  <br>
@@ -39,4 +39,16 @@
             </section>
         </main>
     </body>
+
+    <script>
+        // const submitHandler = event => {
+        //     event.preventDefault()
+        //     alert('Succefully submit')
+        // }
+        const form = document.querySelector(".form")
+        form.addEventListener("submit", (event) => {
+            event.preventDefault()
+            alert('Succefully submit')
+        })
+    </script>
 </html>
