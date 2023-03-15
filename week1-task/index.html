@@ -4,47 +4,141 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Weekly Task - SideHustle Intership</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+            *{
+                box-sizing: border-box;
+                padding: 0%;
+                margin: 0%;
+            }
+
+            html{
+                font-size: 62.5%;
+                background: #C9C9EE;
+                font-family: 'Comfortaa', cursive;
+            }
+
+            body{
+                width: 100vw;
+                height: 100vh;
+            }
+            
+            div{
+                border: 0.03rem solid rgba(4, 21, 31, 0.5);
+                border-radius: 1rem;
+                width: 50vw;
+                margin-left: auto;
+                margin-right: auto;
+                height: 100%;
+            }
+
+            header{
+                margin: 5rem 0rem;
+            }
+
+            header h1{
+                color: #04151F;
+                text-align: center;
+                font-size: 3rem;
+            }
+
+            main{
+                padding: 0rem 5rem;
+            }
+
+            form {
+                font-size: 1.5rem;
+            }
+
+            label{
+                width: 15rem;
+                display: inline-block;
+                color: #443A36;
+                margin-right: 7.5rem;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            input[type="password"],
+            select{
+                width: 35rem;
+                padding: 1rem;
+                font-size: 1.5rem;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            input[type="password"],
+            input[type="submit"],
+            select{
+                border-radius: 1rem;
+                outline: none;
+                border: none;
+            }
+
+            input[type="text"]:focus,
+            input[type="email"]:focus,
+            input[type="tel"]:focus,
+            input[type="password"]:focus,
+            select:focus{
+                border: none;
+                outline: 0.2rem solid #443A36;
+            }
+
+            input[type="submit"]{
+                width: 100%;
+                padding: 1rem ;
+                cursor: pointer;
+                font-size: 1.5rem;
+                margin-top: 2rem;
+                border-radius: 1rem;
+                border: none;
+            }
+
+
+        </style>
     </head>
 
     <body>
-        <header>
-            <h1>Week One Task</h1>
-        </header>
-        <main>
-            <section>
-                <form class="form">
-                    <!-- Users' full name -->
-                    <label for="fullnames">Name </label>
-                    <input type="text" id="fullnames" required> <br>  <br>
-                    <!-- Users' email address -->
-                    <label for="email">Email </label>
-                    <input type="email" id="email" required> <br> <br>
-                    <!-- Users' mobile phone number -->
-                    <label for="telephone">Phone Number </label>
-                    <input type="tel" id="telephone" required> <br> <br>
-                    <!-- Users' gender -->
-                    <label for="gender">Gender </label>
-                    <select id="gender" required>
-                        <option value="" selected></option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                    </select> <br> <br>
-                    <!-- Users' password -->
-                    <label for="password">Password</label>
-                    <input type="password" required> <br> <br>
-                    <!-- Submit button -->
-                    <input type="submit" value="Submit">
-                </form>
-            </section>
-        </main>
+        <div>
+            <header>
+                <h1>Weekly Task</h1>
+            </header>
+            <main>
+                <section>
+                    <form class="form">
+                        <!-- Users' full name -->
+                        <label for="fullnames">Name </label>
+                        <input type="text" id="fullnames" required> <br>  <br>
+                        <!-- Users' email address -->
+                        <label for="email">Email </label>
+                        <input type="email" id="email" required> <br> <br>
+                        <!-- Users' mobile phone number -->
+                        <label for="telephone">Phone Number </label>
+                        <input type="tel" id="telephone" required> <br> <br>
+                        <!-- Users' gender -->
+                        <label for="gender">Gender </label>
+                        <select id="gender" required>
+                            <option value="" selected></option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select> <br> <br>
+                        <!-- Users' password -->
+                        <label for="password">Password</label>
+                        <input type="password" required> <br> <br>
+                        <!-- Submit button -->
+                        <input type="submit" value="Submit">
+                    </form>
+                </section>
+            </main>
+        </div>
     </body>
 
     <script>
-        // const submitHandler = event => {
-        //     event.preventDefault()
-        //     alert('Succefully submit')
-        // }
         const form = document.querySelector(".form")
         form.addEventListener("submit", (event) => {
             event.preventDefault()
