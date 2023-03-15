@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weekly Task - SideHustle Intership</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+            *{
+                box-sizing: border-box;
+                padding: 0%;
+                margin: 0%;
+            }
+
+            html{
+                font-size: 62.5%;
+                background: #C9C9EE;
+                font-family: 'Comfortaa', cursive;
+            }
+
+            body{
+                max-width: 100vw;
+                height: 95vh;
+            }
+            
+            div{
+                border: 0.03rem solid rgba(4, 21, 31, 0.5);
+                border-radius: 1rem;
+                width: 50vw;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 1.8rem;
+                height: 100%;
+            }
+
+            header{
+                margin: 7rem 0rem;
+            }
+
+            header h1{
+                color: #04151F;
+                text-align: center;
+                font-size: 3rem;
+            }
+
+            main{
+                padding: 0rem 2rem;
+            }
+
+            form {
+                font-size: 1.5rem;
+            }
+
+            label{
+                color: #04151F;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            input[type="password"],
+            input[type="submit"],
+            select{
+                width: 100%;
+                padding: 1rem;
+                font-size: 1.5rem;
+                border-radius: 1rem;
+                outline: none;
+                border: none;
+            }
+
+
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            input[type="password"],
+            select{
+                margin-top: 0.5rem;
+            }
+
+            input[type="text"]:focus,
+            input[type="email"]:focus,
+            input[type="tel"]:focus,
+            input[type="password"]:focus,
+            input[type="submit"]:focus,
+            select:focus{
+                outline: 0.2rem solid #443A36;
+            }
+
+            input[type="submit"]{
+                cursor: pointer;
+                margin-top: 2rem;
+                color: #04151F;
+                background: #73628A;
+            }
+
+            input[type="submit"]:hover{
+                background: #04151F;
+                color: #73628A;
+            }
+
+            input[type="submit"]:active{
+                            background: #73628A;
+                            color: #04151F;
+            }
+
+            /* For Mobile Phone */
+            @media (max-width: 500px) {
+                div{
+                    width: 80vw;
+                }
+            }
+
+            @media (max-width: 300px) {
+                div{
+                    width: 80vw;
+                }
+
+                main{
+                    padding: 0rem 2rem;
+                }
+            }
+
+            @media (orientation: landscape){
+                div{
+                height: 95vw;
+            }
+            }
+
+
+
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <header>
+                <h1>Weekly Task</h1>
+            </header>
+            <main>
+                <section>
+                    <form class="form">
+                        <!-- Users' full name -->
+                        <label for="fullnames">Name </label>
+                        <input type="text" id="fullnames" required> <br>  <br>
+                        <!-- Users' email address -->
+                        <label for="email">Email </label>
+                        <input type="email" id="email" required> <br> <br>
+                        <!-- Users' mobile phone number -->
+                        <label for="telephone">Phone Number </label>
+                        <input type="tel" id="telephone" required> <br> <br>
+                        <!-- Users' gender -->
+                        <label for="gender">Gender </label>
+                        <select id="gender" required>
+                            <option value="" selected></option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select> <br> <br>
+                        <!-- Users' password -->
+                        <label for="password">Password</label>
+                        <input type="password" required> <br> <br>
+                        <!-- Submit button -->
+                        <input type="submit" value="Submit">
+                    </form>
+                </section>
+            </main>
+        </div>
+    </body>
+
+    <script>
+        const form = document.querySelector(".form")
+        form.addEventListener("submit", (event) => {
+            event.preventDefault()
+            alert('Succefully submit')
+        })
+    </script>
+</html>
