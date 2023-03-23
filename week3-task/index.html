@@ -5,7 +5,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Gmail Account Registration">
+    <meta name=>
     <title>Gmail Account Registration</title>
+    <link rel="icon" href="./images/google-search.png"></link>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@100&display=swap');
+
+        :root{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body{
+            max-width: 90vw;
+            margin: 2rem auto;
+            min-height: 100%;
+        }
+        body, input, textarea, select, button{
+            color: #202124;
+            font-family: roboto,"Noto Sans Myanmar UI",arial,sans-serif;
+        }
+        h1{
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+        input{
+            width: 99%;
+            border: none;
+            margin: 0px;
+            padding: 0.5rem;
+        }
+        fieldset{
+            max-width: 90%;
+            margin: 1.5rem 0rem;
+            padding: 0px;
+            border-radius: 0.3rem;
+        }
+        .input-user-name{
+            display: grid;
+            grid-template-columns:2fr 1fr;
+        }
+
+        .input-user-name span{
+            padding: 0.5rem;
+        }
+
+        input, span{
+            font-weight: 100;
+            font-size: 0.9rem;
+        }
+        #password-properties{
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+        }
+        #password-properties p:nth-of-type(1){
+            font-size: 0.8rem;
+        }
+        #password-properties p{
+            margin: 0px;
+        }
+        #password-properties p:nth-of-type(2){
+            display: grid;
+            grid-template-columns: 1fr 7fr;
+            margin-top: 0.7rem;
+        }
+        #password-properties p:nth-of-type(2) input{
+            height: 1.2rem;
+        }
+        #sign-options{
+            display: grid;
+            grid-template-columns: 2fr 3fr 1fr;
+            margin: 2rem 0px 3rem;
+        }
+
+    </style>
 </head>
 <body>
     <!-- ***********************HEADER SECTION****************************** -->
@@ -39,30 +113,34 @@
     <main>
         <form action="">
             <fieldset>
-                <input type="text" name="first-name" id="first-name" placeholder="First Name">
+                <input required autocomplete="off" type="text" name="first-name" id="first-name" placeholder="First Name">
             </fieldset>
 
             <fieldset>
-                <input type="text" name="last-name" id="last-name" placeholder="Last Name">
+                <input required autocomplete="off" type="text" name="last-name" id="last-name" placeholder="Last Name">
+            </fieldset>
+
+            <fieldset  class="input-user-name">
+                <input required autocomplete="off" type="text" name="user-name" id="user-name" placeholder="Username"> <span>@gmail.com</span>
             </fieldset>
 
             <fieldset>
-                <input type="text" name="user-name" id="user-name" placeholder="Username">
+                <input required autocomplete="off" type="password" name="password" id="password" placeholder="Password">
             </fieldset>
 
             <fieldset>
-                <input type="password" name="password" id="password" placeholder="Password">
-            </fieldset>
-
-            <fieldset>
-                <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm">
+                <input required autocomplete="off" type="password" name="confirm-password" id="confirm-password" placeholder="Confirm">
             </fieldset>
     
-            <div>Use 8 or more characters with a mix of letters, numbers & symbols</div>
+            <div id="password-properties">
+                <p>Use 8 or more characters with a mix of letters, numbers & symbols</p>
+                <p><input required autocomplete="off" type="checkbox" name="show-password" id="show-password"> <span>Show Password</span></p>
+            </div>
     
-            <div>
-                <a href="#">Sign in instead</a>
-                <input type="button" value="Next">
+            <div id="sign-options">
+                <button>Sign in instead</button>
+                <p></p>
+                <button>Next</button>
             </div>
         </form>
     </main>
@@ -78,12 +156,18 @@
             <option value="ce">Čeština</option>
             <option value="dk">Dansk</option>
             <option value="et">eesti</option>
-            <option value="uk">English (United Kingdom)</option>
+            <option value="uk" selected>English (United Kingdom)</option>
             <option value="us">English (United States)</option>
             <option value="uk">English (United Kingdom)</option>
             <option value="uk">English (United Kingdom)</option>
             <option value="uk">English (United Kingdom)</option>
         </select>
+
+        <div>
+            <a href="https://support.google.com/accounts?hl=en-GB&p=account_iph">Help</a>
+            <a href="https://accounts.google.com/TOS?loc=NG&hl=en-GB&privacy=true">Privacy</a>
+            <a href="https://accounts.google.com/TOS?loc=NG&hl=en-GB">Terms</a>
+        </div>
     </footer>
 </body>
 </html>
