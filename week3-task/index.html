@@ -31,13 +31,13 @@
             font-weight: 400;
         }
         input{
-            width: 99%;
+            width: 95%;
             border: none;
             margin: 0px;
             padding: 0.5rem;
         }
         fieldset{
-            max-width: 90%;
+            max-width: 100%;
             margin: 1.5rem 0rem;
             padding: 0px;
             border-radius: 0.3rem;
@@ -76,9 +76,33 @@
         #sign-options{
             display: grid;
             grid-template-columns: 2fr 3fr 1fr;
-            margin: 2rem 0px 3rem;
+            margin-top: 2rem;
         }
-
+        #sign-options button:nth-of-type(1){
+            color: #1A73E8;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+        }
+        #sign-options button:nth-of-type(1):hover{
+            background: #dadbdd;
+        }
+        footer::before{
+            margin-bottom: 9rem;
+            content: "";
+            display: block;
+        }
+        footer select{
+            margin-bottom: 1rem;
+            padding: 0.2rem 1.8rem 0.2rem 0.2rem;
+        }
+        footer div:nth-of-type(1) a{
+            margin-right: 0.5rem;
+            color: #3C4043;
+        }
+        footer div:nth-of-type(1) a:nth-of-type(3){
+            margin-right: 0px;
+        }
     </style>
 </head>
 <body>
