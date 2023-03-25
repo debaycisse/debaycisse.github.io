@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@100&display=swap');
+
+:root{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    max-width: 90vw;
+    margin: 2rem auto;
+    min-height: 100%;
+}
+body, input, textarea, select, button{
+    color: #202124;
+    font-family: roboto,"Noto Sans Myanmar UI",arial,sans-serif;
+}
+h1{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+input{
+    width: auto;
+    border: none;
+    margin: 0px;
+    padding: 0.5rem;
+}
+input:focus{
+    outline: none;
+}
+fieldset{
+    max-width: 100%;
+    margin: 1.5rem 0rem;
+    padding: 0px;
+    border-radius: 0.3rem;
+    border-width: 0.12rem;
+    border-style: solid;
+    border-color: rgb(195, 195, 195);
+}
+.input-user-name{
+    display: grid;
+    grid-template-columns:2fr 1fr;
+}
+
+.input-user-name span{
+    padding: 0.5rem;
+    text-align: right;
+}
+
+input, span{
+    font-weight: 100;
+    font-size: 0.9rem;
+}
+#password-properties{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+#password-properties p:nth-of-type(1){
+    font-size: 0.8rem;
+}
+#password-properties p{
+    margin: 0px;
+}
+#password-properties p:nth-of-type(2){
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    margin-top: 0.7rem;
+    font-size: 0.5rem;
+    /* padding: .5rem 0px; */
+    height: 1.5rem;
+}
+#password-properties p:nth-of-type(2) input{
+    height: 1rem;
+    margin: 0.2rem 0px;
+}
+#password-properties p:nth-of-type(2) span{
+    vertical-align: middle;
+}
+#sign-options{
+    display: grid;
+    grid-template-columns: 1fr 2fr 0.5fr;
+    margin-top: 2rem;
+    max-height: 1.5rem;
+}
+#sign-options button:nth-of-type(1){
+    color: #1A73E8;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-weight: 600;
+}
+#sign-options button:nth-of-type(1):hover{
+    background: #f5f8ff;
+}
+#sign-options button:nth-of-type(1) a{
+    text-decoration: none;
+}
+#sign-options button:nth-of-type(2){
+    background: #1A73E8;
+    color: #ffffff;
+    border: none;
+    border-radius: .3rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+footer{
+    font-size: 0.8rem;
+    margin-top: 2.5rem;
+}
+footer select{
+    padding: 0.2rem 0.8rem 0.2rem 0px;
+    font-size: 0.8rem;
+    background: transparent;
+    border: none;
+}
+footer div:nth-of-type(1) a{
+    margin-right: 1.5rem;
+    color: #3C4043;
+    text-decoration: none;
+}
+footer div:nth-of-type(1) a:nth-of-type(3){
+    margin-right: 0px;
+}
+.hidden{
+    display: none;
+}
+form fieldset:nth-of-type(1) input:focus + .hidden,
+form fieldset:nth-of-type(2) input:focus + .hidden,
+form fieldset:nth-of-type(3) input:focus + .hidden,
+form fieldset:nth-of-type(4) input:focus + .hidden,
+form fieldset:nth-of-type(5) input:focus + .hidden{
+    display: block;
+}
+legend{
+    font-size: 0.7rem;
+}
+form, footer, #wrapper{
+    display: grid;
+}
+aside{
+    display: none;
+}
+
+
+@media screen and (min-width: 700px) {
+    body{
+        padding: 10rem;
+    }
+    #wrapper{
+        border-radius: 1rem;
+        border: 0.1rem solid rgb(221, 221, 221);
+        padding: 2rem;
+    }
+    footer{
+        grid-template-columns: 1fr 2fr;
+        margin-top: 2rem;
+    }
+    footer div{
+        text-align: right;
+    }
+    form{
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "firstName lastName"
+                             "userName  userName"
+                             "password  confirmPassword"
+                             "passwordP passwordP"
+                             "signInOp  signInOp";
+        grid-gap: 0.8rem;
+    }
+    form fieldset:nth-of-type(1){
+        grid-area: firstName;
+    }
+    form fieldset:nth-of-type(2){
+        grid-area: lastName;
+    }
+    form fieldset:nth-of-type(3){
+        grid-area: userName;
+    }
+    form fieldset:nth-of-type(4){
+        grid-area: password;
+    }
+    form fieldset:nth-of-type(5){
+        grid-area: confirmPassword;
+    }
+    form div:nth-of-type(1){
+        grid-area: passwordP;
+    }
+    form div:nth-of-type(2){
+        grid-area: signInOp;
+    }
+}
+@media screen and (min-width: 901px) {
+    body{
+        padding: 5rem;
+        max-width: 901px;
+    }
+    #wrapper{
+        grid-template-rows: 1fr 3fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "header aside"
+                             "main   aside";
+        align-items: center;
+        grid-row-gap: 0rem;
+        grid-column-gap: 1.5rem;
+    }
+    #wrapper header{
+        grid-area: header;
+    }
+    #wrapper main{
+        grid-area: main;
+    }
+    #wrapper aside{
+        grid-area: aside;
+        display: block;
+    }
+    aside img{
+        margin: 0rem 0rem 0.5rem;
+    }
+    aside p{
+        margin: 0rem;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+}
