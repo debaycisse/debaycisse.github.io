@@ -8,167 +8,9 @@
     <meta name=>
     <title>Gmail Account Registration</title>
     <link rel="icon" href="./images/google-search.png"></link>
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@100&display=swap');
-
-        :root{
-            padding: 0px;
-            margin: 0px;
-        }
-
-        body{
-            max-width: 90vw;
-            margin: 2rem auto;
-            min-height: 100%;
-        }
-        body, input, textarea, select, button{
-            color: #202124;
-            font-family: roboto,"Noto Sans Myanmar UI",arial,sans-serif;
-        }
-        h1{
-            font-size: 1.5rem;
-            font-weight: 400;
-        }
-        input{
-            width: 95%;
-            border: none;
-            margin: 0px;
-            padding: 0.5rem;
-        }
-        input:focus{
-            outline: none;
-        }
-        fieldset{
-            max-width: 100%;
-            margin: 1.5rem 0rem;
-            padding: 0px;
-            border-radius: 0.3rem;
-            border-width: 0.12rem;
-            border-style: solid;
-            border-color: rgb(195, 195, 195);
-        }
-        .input-user-name{
-            display: grid;
-            grid-template-columns:2fr 1fr;
-        }
-
-        .input-user-name span{
-            padding: 0.5rem;
-        }
-
-        input, span{
-            font-weight: 100;
-            font-size: 0.9rem;
-        }
-        #password-properties{
-            display: grid;
-            grid-template-rows: 1fr 1fr;
-        }
-        #password-properties p:nth-of-type(1){
-            font-size: 0.8rem;
-        }
-        #password-properties p{
-            margin: 0px;
-        }
-        #password-properties p:nth-of-type(2){
-            display: grid;
-            grid-template-columns: 1fr 7fr;
-            margin-top: 0.7rem;
-            font-size: 0.5rem;
-            /* padding: .5rem 0px; */
-            height: 1.5rem;
-        }
-        #password-properties p:nth-of-type(2) input{
-            height: 1rem;
-            margin: 0.2rem 0px;
-        }
-        #password-properties p:nth-of-type(2) span{
-            vertical-align: middle;
-        }
-        #sign-options{
-            display: grid;
-            grid-template-columns: 2fr 2fr 1fr;
-            margin-top: 2rem;
-        }
-        #sign-options button:nth-of-type(1){
-            color: #1A73E8;
-            border: none;
-            background: transparent;
-            cursor: pointer;
-            font-weight: 600;
-        }
-        #sign-options button:nth-of-type(1):hover{
-            background: #f5f8ff;
-        }
-        #sign-options button:nth-of-type(2){
-            background: #1A73E8;
-            color: #ffffff;
-            border: none;
-            border-radius: .3rem;
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;
-            padding-top: 0.2rem;
-            padding-bottom: 0.2rem;
-            font-weight: 600;
-        }
-        footer::before{
-            margin-bottom: 9rem;
-            content: "";
-            display: block;
-        }
-        footer{
-            font-size: 0.8rem;
-        }
-        footer select{
-            margin-bottom: 2rem;
-            padding: 0.2rem 1.8rem 0.2rem 0.2rem;
-            font-size: 0.8rem;
-            background: transparent;
-            border: none;
-        }
-        footer div:nth-of-type(1) a{
-            margin-right: 1.5rem;
-            color: #3C4043;
-            text-decoration: none;
-        }
-        footer div:nth-of-type(1) a:nth-of-type(3){
-            margin-right: 0px;
-        }
-        .hidden{
-            display: none;
-        }
-        form fieldset:nth-of-type(1) input:focus + .hidden,
-        form fieldset:nth-of-type(2) input:focus + .hidden,
-        form fieldset:nth-of-type(3) input:focus + .hidden,
-        form fieldset:nth-of-type(4) input:focus + .hidden,
-        form fieldset:nth-of-type(5) input:focus + .hidden{
-            display: block;
-        }
-        legend{
-            font-size: 0.7rem;
-        }
-        form{
-            display: grid;
-        }
-        
-        @media screen and (min-width: 700px) {
-            body{
-                max-width: 75vw;
-                padding: 10rem 4rem;
-            }
-            #wrapper{
-                border-radius: 1rem;
-                border: 0.1rem solid rgb(221, 221, 221);
-                padding-left: 2rem;
-                padding-right: 2rem;
-                padding: 2.5rem ;
-            }
-            form{
-
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="application/javascript" src="./js/script.js" async></script>
+    
 </head>
 <body>
     <div id="wrapper">
@@ -202,7 +44,7 @@
         
         <!-- ***********************MAIN SECTION****************************** -->
         <main>
-            <form action="">
+            <form>
                 <fieldset>
                     <input required autocomplete="off" type="text" name="first-name" id="first-name" placeholder="First Name">
                     <legend class="hidden">First Name</legend>
@@ -234,14 +76,18 @@
                 </div>
         
                 <div id="sign-options">
-                    <button>Sign in instead</button>
+                    <button id="button-sign-in-instead"><a href="https://accounts.google.com/signin">Sign in instead</a></button>
                     <p></p>
-                    <button>Next</button>
+                    <button id="button-next">Next</button>
                 </div>
             </form>
         </main>
-        
-        
+        <aside>
+            <div>
+                <img src="./images/account.svg" alt="google account image">
+                <p>One account. All of Google working for you.</p>
+            </div>
+        </aside>
     </div>
     <!-- ***********************FOOTER SECTION****************************** -->
     <footer>
@@ -268,75 +114,5 @@
     </footer>
 </body>
 
-<script>
-    const allInputs = document.querySelectorAll("input");
 
-    const handlePlaceHolder = (event) => {
-        event.target.attributes[5].nodeValue = "";
-    }
-
-    const handleFocusExit = (event) => {
-        const placeHolder = event.target.nextElementSibling.textContent;
-
-        if(event.target.value.length < 1){
-            event.target.attributes[5].nodeValue = placeHolder;
-        }
-    }
-
-    for(var ind = 0; allInputs.length > ind; ind++){
-        if(allInputs[ind].type !== 'checkbox'){
-            
-            // Add event listener to all allTextInputs
-            allInputs[ind].addEventListener('focus', event => handlePlaceHolder(event));
-            allInputs[ind].addEventListener('blur', event => handleFocusExit(event));
-
-        }
-    }
-    
-    const userName = document.querySelector("#user-name");
-    userName.addEventListener('focus', event => {
-        const nextSibling = event.target.nextElementSibling;
-        const placeHolder = nextSibling.nextElementSibling.textContent;
-        event.target.attributes[5].nodeValue = "";
-
-        const legend = nextSibling.nextElementSibling;
-        legend.style.display = 'block';
-        
-    });
-
-    userName.addEventListener('blur', event => {
-        const nextSibling = event.target.nextElementSibling;
-        const placeHolder = nextSibling.nextElementSibling.textContent;
-        
-
-        if(event.target.value.length < 1){
-            event.target.attributes[5].nodeValue = placeHolder;
-        }
-
-        const legend = nextSibling.nextElementSibling;
-        legend.style.display = 'none';
-    });
-
-
-    // Toggle password actual text value
-    
-    const checkbox = document.querySelector("#show-password");
-    const togglePasswordValue = (event) => {
-        const password = document.querySelector("#password");
-        const confirmPassword = document.querySelector("#confirm-password");
-
-        if(checkbox.checked){
-            password.type = 'text';
-            confirmPassword.type = 'text';
-        }else{
-            password.type = 'password';
-            confirmPassword.type = 'password';
-        }
-
-    }
-    checkbox.addEventListener('click', event => togglePasswordValue(event));
-
-
-    
-</script>
 </html>
