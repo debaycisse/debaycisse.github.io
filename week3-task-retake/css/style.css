@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 html{
-    background: no-repeat url("images/seascape-4844697_960_720.jpg");
+    background: no-repeat url("/images/seascape-4844697_960_720.jpg");
     background-size: cover;
 }
 body{
